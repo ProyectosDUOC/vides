@@ -23,3 +23,7 @@ INSERT INTO `acceso` (`id_acceso`, `id_usuario`, `username`, `password`, `activo
 INSERT INTO `vehiculo_volador` (`id_vehiculo_volador`, `modelo`, `activo`) VALUES ('1', 'Dron modelo phanteon II', '1');
 INSERT INTO `vehiculo_volador` (`id_vehiculo_volador`, `modelo`, `activo`) VALUES ('2', 'WaterProof ', '1');
 INSERT INTO `vehiculo_volador` (`id_vehiculo_volador`, `modelo`, `activo`) VALUES ('3', 'Dron 300', '1');
+
+-- tipo monitoreo
+INSERT INTO `tipo_monitoreo` (`id_tipo_monitoreo`, `nombre_monitoreo`) VALUES ('1', 'Regadio');
+INSERT INTO `tipo_monitoreo` (`id_tipo_monitoreo`, `nombre_monitoreo`) VALUES ('2', 'Reporte Dron');
