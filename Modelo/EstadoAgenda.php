@@ -12,6 +12,7 @@ CREATE TABLE estado_agenda
 class EstadoAgenda {
     private $id_estado_a;
     private $nombre_estado;
+    
     function __construct($id_estado_a, $nombre_estado) {
         $this->id_estado_a = $id_estado_a;
         $this->nombre_estado = $nombre_estado;

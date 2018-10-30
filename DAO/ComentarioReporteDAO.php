@@ -1,16 +1,11 @@
 <?php
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+if (!isset($rootDir)) $rootDir = $_SERVER['DOCUMENT_ROOT'];
 
-/**
- * Description of ComentarioReporte
- *
- * @author benja
- */
+require_once($rootDir . "/DB/DB.php");
+require_once($rootDir . "/Modelo/ComentarioReporte.php");
+
+
 class ComentarioReporteDAO {
     public static function lastValue(){
         $cc = DB::getInstancia();
@@ -50,19 +45,19 @@ class ComentarioReporteDAO {
 
     public static function readAll() { 
         $cc =DB::getInstancia();
-        $stSql = "SELECT * FROM agenda";
+        $stSql = "SELECT * FROM comentario_reporte";
         $rs = $cc->db->prepare($stSql);
         $rs->execute();
         $ba = $rs->fetchAll();
         
         $pila = array();
         foreach ($ba as $c) {
-               $nuevo = new ComentarioReporte($ba['id_comentario'],
-                            $ba['id_usuario'],
-                            $ba['fecha_comentario'],
-                            $ba['comentario'], 
-                            $ba['activo'],
-                            $ba['id_reporte']);
+               $nuevo = new ComentarioReporte($c['id_comentario'],
+                            $c['id_usuario'],
+                            $c['fecha_comentario'],
+                            $c['comentario'], 
+                            $c['activo'],
+                            $c['id_reporte']);
         return $nuevo;        
             array_push($pila, $nuevo);
         }

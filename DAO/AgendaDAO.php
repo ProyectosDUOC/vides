@@ -93,13 +93,13 @@ class AgendaDAO {
         
         $pila = array();
         foreach ($ba as $c) {
-               $nuevo = new Agenda($ba['id_agenda'],
-                            $ba['fecha_creacion'],
-                            $ba['fecha_programada'],
-                            $ba['descripcion'], 
-                            $ba['id_estado_a'],
-                            $ba['id_tipo_monitoreo'],
-                            $ba['id_usuario']);
+               $nuevo = new Agenda($c['id_agenda'],
+                            $c['fecha_creacion'],
+                            $c['fecha_programada'],
+                            $c['descripcion'], 
+                            $c['id_estado_a'],
+                            $c['id_tipo_monitoreo'],
+                            $c['id_usuario']);
         return $nuevo;        
             array_push($pila, $nuevo);
         }
