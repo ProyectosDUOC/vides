@@ -34,6 +34,15 @@ class AccesoDAO {
                             $ba['activo']);
         return $nuevo;        
     }
+
+    public static function ingreso($username,$password){
+        $cc = DB::getInstancia();
+        $stSql = "SELECT * FROM acceso WHERE username=:username";
+        $rs = $cc->db->prepare($stSql);
+        $rs->execute(array('username' => $username));
+        $ba = $rs->fetch();
+        return $ba['password'] == $password;
+    }
     
     public static function agregar($nuevo) {
         $cc=DB::getInstancia();
