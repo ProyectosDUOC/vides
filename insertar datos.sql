@@ -27,3 +27,10 @@ INSERT INTO `vehiculo_volador` (`id_vehiculo_volador`, `modelo`, `activo`) VALUE
 -- tipo monitoreo
 INSERT INTO `tipo_monitoreo` (`id_tipo_monitoreo`, `nombre_monitoreo`) VALUES ('1', 'Regadio');
 INSERT INTO `tipo_monitoreo` (`id_tipo_monitoreo`, `nombre_monitoreo`) VALUES ('2', 'Reporte Dron');
+
+
+-- estado agenda
+
+INSERT INTO `estado_agenda` (`id_estado_a`, `nombre_estado`) VALUES ('1', 'Pendiente');
+INSERT INTO `estado_agenda` (`id_estado_a`, `nombre_estado`) VALUES ('2', 'Cancelada');
+INSERT INTO `estado_agenda` (`id_estado_a`, `nombre_estado`) VALUES ('3', 'Finalizada');
